@@ -1,0 +1,36 @@
+{% extends "homepage/base2.html" %}
+{% load static %}
+
+
+{% block title %}
+Cake
+{% endblock title %}
+
+{% block content %}
+<section class="nopadding">
+    <img class ="picture-slide" src="{% static 'homepage/media/drawcake.jpg' %}">
+</section>
+<section style="margin-left: 70px; margin-right: 150px;">
+    <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="col-sm-6" style="margin-bottom:20px;">
+                <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+            </div>
+            <div class="col-sm-6" style="margin-bottom:20px;">
+                <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+            </div>
+            <div class="col-sm-6" style="margin-bottom:20px;">
+                <input type="tel" name="message-tel" class="form-control mb-30" placeholder="Your Phone Number">
+            </div>
+        </div>
+        <div class="col-sm-6" style="margin-bottom:20px;">
+            <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+        </div>
+        <div class="col-12" >
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+    
+</section>
+{% endblock content %}

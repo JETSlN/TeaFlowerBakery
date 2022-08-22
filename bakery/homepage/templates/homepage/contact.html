@@ -1,0 +1,41 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/style.css' %}">
+        <section>
+            <img class ="picture-slide" src="{% static 'homepage/media/bannerbak2.png' %}" style="width:100%;">
+        </section>
+        <section style="margin-left: 70px; margin-right: 150px;">
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-sm-6" style="margin-bottom:20px;">
+                        <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                    </div>
+                    <div class="col-sm-6" style="margin-bottom:20px;">
+                        <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                    </div>
+                    <div class="col-sm-6" style="margin-bottom:20px;">
+                        <input type="tel" name="message-tel" class="form-control mb-30" placeholder="Your Phone Number">
+                    </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom:20px;">
+                    <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12" >
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+            
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4282.246380675855!2d-74.01388793488098!3d40.62976167913932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245463b993f6f%3A0x284932b3cfdcae4a!2sTea%20Flower%20Bakery!5e0!3m2!1sen!2sus!4v1660776079465!5m2!1sen!2sus" width="900" height="600" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   </div>
+                </div>
+            </div>
+        </section>
+{% endblock body %}

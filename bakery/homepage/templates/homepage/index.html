@@ -1,0 +1,91 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+
+{% block body %}
+        <section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <a href="drink" class = "swiper-slide picture-slide">
+                        <img src="{% static 'homepage/media/milk-tea3.jpg' %}" alt="Milk-tea" >
+                    </a>
+                    <a href="contact" class = "swiper-slide picture-slide">
+                        <img src="{% static 'homepage/media/bannerbak2.png' %}" alt="contactus">
+                    </a>
+                    <a href="cake" class = "swiper-slide picture-slide" style="height: 379px; background-color: rgba(0,0,0,0); text-decoration: none;">
+                        <p class="text-center" id="newfont" style="font-size:100px; color: #398AD7;">CAKE</p>
+                    </a>
+                  
+                 
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    autoplay: {
+                    delay: 6000,
+                    disableOnInteraction: false,
+                    },
+                    pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                    },
+                    navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                    },
+                });
+                swiper.on('slideChange', function () {
+                    var wrap = document.getElementById("wraps");
+                    if(this.activeIndex === 0) {
+                        wrap.style.backgroundColor = "#2e2926";
+                        wrap.style.backgroundImage = "none";
+                    }
+                    else if(this.activeIndex === 1) {
+                        wrap.style.backgroundColor = "#f9f6e7";
+                        wrap.style.backgroundImage = "none";
+                    }
+                    else if(this.activeIndex === 2) {
+                        wrap.style.backgroundColor = "#e0c5a7";
+                        wrap.style.backgroundImage = "url({% static 'homepage/media/cakepic.jpg' %})";
+                        wrap.style.backgroundSize = "cover";
+                        wrap.style.backgroundRepeat = "no-repeat";
+                        wrap.style.backgroundPosition = "center";
+                    }
+                    
+    });
+
+            </script>
+        </section>
+
+        <section>
+            <div class="container">
+            
+                <div class="row">
+                    <div class="col-sm text-center home-boxes">
+                        <a href="bread" > 
+                            <img src="{% static 'homepage/media/smallbuns.jpg' %}" alt="Buns" class = "picture-front mx-auto">
+                            <h2>BUNS 麵包</h2>
+                        </a>
+                    </div>
+                    <div class="col-sm text-center home-boxes">
+                        <a href="cookie"> 
+                            <img src="{% static 'homepage/media/Almond-Sable.jpg' %}" alt="Pastry" class = "picture-front">
+                            <h2>COOKIES 餅乾</h2>
+                        </a>
+                    </div>
+                    <div class="col-sm text-center home-boxes">
+                        <a href="pastry"> 
+                            <img src="{% static 'homepage/media/Slice-Cake.jpg' %}" alt="Cake" class = "picture-front">
+                            <h2>PASTRIES 西餅</h2>
+                        </a>
+                    </div>
+                </div>
+              </div>
+        </section>
+
+{% endblock body %}

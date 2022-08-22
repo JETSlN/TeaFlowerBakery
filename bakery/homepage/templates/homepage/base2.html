@@ -1,0 +1,43 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/style1.css' %}">
+<h1 class="page-title text-center" style="margin-bottom: 30px; margin-top: 30px; font-size: 50px; color: #726766;">
+    {% block title %}
+    {% endblock title %}
+</h1>
+
+<section>
+    <div class="container-fluid grid">   
+        <div class="row tab-container" style="background-color: #fff2f2;">
+            <div class="col-sm text-center">
+                <ul class = "nav nav-pills justify-content-center">
+                    <li class="hello">
+                        <a class= "nav-link" href="bread" style="color:red">Bread</a>
+                    </li>
+                    <li class="hello">
+                        <a class= "nav-link" href="drink" style="color:red">Drink</a>
+                    </li>
+                    <li class="hello">
+                        <a class= "nav-link" href="pastry" style="color:red">Pastry</a>
+                    </li>
+                    <li class="hello">
+                        <a class= "nav-link" href="cookie" style="color:red">Cookie</a>
+                    </li>
+                    <li class="hello">
+                        <a class= "nav-link" href="cake" style="color:red">Cake</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="background-color: #fff;">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+</section>
+{% endblock body %}
+
+

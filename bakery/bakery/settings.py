@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -121,14 +121,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "homepage/static"),)
-STATIC_ROOT = os.path.join(BASE_DIR, "/homepage/static")
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "homepage/static"),)
+# STATIC_ROOT = os.path.join(BASE_DIR, "/homepage/static")
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-MEDIA_URL = "/media/"
+# MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "/homepage/static/homepage/media")
+# MEDIA_ROOT = os.path.join(BASE_DIR, "/homepage/static/homepage/media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

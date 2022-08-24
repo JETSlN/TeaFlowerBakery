@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+#newfont{
+  font-family: 'Dosis', sans-serif;
+}
+.greeny {
+    background-color:  #6aa84f;
+}
+.logo-font{
+    color: #e95e0d;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #5d983a;
+    width: 125px;
+    text-align: center;
+}   
+.logo-font-2{
+    background-color: #e95e0d;
+    color: #5d983a;
+    font: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.divider {
+    width: 2px;
+    margin: 1px 0;
+    background: blue;
+  }
+
+
+  @media (min-width: 1000px){
+    .wrap {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1000px;
+    }
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .picture-front {
+    max-width: 100%;
+    max-height: 289px;
+    height: auto;
+  }
+
+  .wrap{
+    background-color: #f9f6e7;
+    vertical-align: baseline;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .picture-slide {
+    object-fit: cover;
+    max-width: 1000px;
+    max-height: 379px;
+  }
+
+  .home-boxes {
+    color: #fff;
+    position: relative;
+    opacity: 1;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+section {
+  margin-bottom: 30px;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #2C2019;
+}
+footer{
+  background: url(https://fayda.com/wp-content/themes/fayda/img/semicircle.png) repeat-x left bottom;
+  padding: 50px 0;
+}
+
+
+.hello {
+    display: inline-block;
+    padding: 0% 3%;
+  }
+.hello a {
+    text-decoration: none;
+  }
+
+.hello a:hover {
+    text-decoration: none;
+    background-color: #6aa84f;
+  }
+
+.invis {
+    opacity: 0;
+    transition:  0.6s;
+    text-align: center;
+}
+.overlay {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition:  0.6s;
+    background: rgba(204, 204, 204, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.contained:hover .invis {
+    opacity: 1;
+}
+.contained:hover .overlay {
+    opacity: 1;
+    
+}
+
+.nopadding {
+    padding: 0 !important;
+ }
+
+ .logopic{
+    max-width: 188px;
+    height: auto;
+ }
+
+ .contained {
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-color: rgba(204, 204, 204, 0.5);
+  border-width: 2px;
+ }

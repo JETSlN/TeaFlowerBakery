@@ -30,6 +30,23 @@ DEBUG = True
 ALLOWED_HOSTS = ['.herokuapp.com']
 
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+
+CSRF_TRUSTED_ORIGINS = ['https://teaflowerbakery.herokuapp.com']
+
+CORS_REPLACE_HTTPS_REFERER = True
+
+CSRF_COOKIE_DOMAIN = 'teaflowerbakery.herokuapp.com'
+
+CORS_ORIGIN_WHITELIST = (
+'https://teaflowerbakery.herokuapp.com',
+)
+
 # Application definition
 
 INSTALLED_APPS = [
